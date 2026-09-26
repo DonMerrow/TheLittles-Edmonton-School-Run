@@ -1,0 +1,12 @@
+Level 1: gathered 18 children.
+Level 1 school line: 18 children; choice ready: True.
+School arrival safely brought every trailing follower into the line; no off-screen child blocked progression.
+Danny entered the school through the normal E-button path and Level 2 began automatically.
+Level 2: snowboard cleared; Wolf Park visited; gathered 7 children; busy False.
+Level 2 school line completed; Level 3 began after 2 processions.
+Level 3 Mom stayed home in voice-only mode; a collision could not trigger a false river rescue or end the search.
+Level 3 began with 12 missing children.
+Level 3 partial return: 11 children entered; 1 still missing; search resumed with the kid radar.
+Gathered the last 1 search groups; remaining 0; following 1.
+School processions: 4; final children entered: 12/12; Danny entered: True; cheering children visible: 8; confetti pieces: 160; cheers: 1; proud Mother voice: True; runtime errors: 0.
+PASS: Levels 1, 2 and 3 completed; Danny entered school to children's cheers, confetti and Mother's proud recorded voice.

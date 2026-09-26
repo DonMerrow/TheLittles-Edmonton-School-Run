@@ -1,0 +1,41 @@
+# Unity-generated content
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Local and IDE files
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.utmp
+unity-compile.log
+
+# Credentials and local RevenueCat build configuration
+Assets/Resources/RevenueCatPublicKey.txt
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+google-services.json
+
+# Operating-system files
+.DS_Store
+Thumbs.db

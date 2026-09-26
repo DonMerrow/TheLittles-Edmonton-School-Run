@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HomeDeparture.unity
+    guid: f9aeb03ecbdeea95d9581382ae404bae
+  - enabled: 1
+    path: Assets/Scenes/DannyGameplayTest.unity
+    guid: cf3a90539e0fd74a1961df2e147e66e0
+  - enabled: 1
+    path: Assets/Scenes/AlbertaSchoolRunPrototype.unity
+    guid: 3f3f532ca2935ffb19eec8eaabdb8cf9
+  - enabled: 1
+    path: Assets/Scenes/EdmontonRiverValleySchoolRun.unity
+    guid: 58e0fecbb3e958b53a1fa3da63427f21
+  m_configObjects:
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
