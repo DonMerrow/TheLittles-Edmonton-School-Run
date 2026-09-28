@@ -3,8 +3,6 @@
 Guide Danny through an Edmonton whiteout, find missing children, and bring the
 whole neighbourhood safely to school—together.
 
-![The Littles: Edmonton School Run key art](docs/images/the-littles-devpost-hero-v2.png)
-
 ![Danny and the children celebrate at school](docs/screenshots/level-3-finale.png)
 
 ## The story
