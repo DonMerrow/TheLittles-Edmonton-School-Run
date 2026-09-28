@@ -3,6 +3,8 @@
 Guide Danny through an Edmonton whiteout, find missing children, and bring the
 whole neighbourhood safely to school—together.
 
+![The Littles: Edmonton School Run key art](docs/images/the-littles-devpost-hero-v2.png)
+
 ![Danny and the children celebrate at school](docs/screenshots/level-3-finale.png)
 
 ## The story
@@ -21,6 +23,8 @@ together, and does his best for his community.
 The Android APK and Linux build are published on the repository's Releases
 page. The Android version can be installed directly while its Google Play
 listing completes account verification and testing.
+
+[Watch the development preview on YouTube](https://youtu.be/FBpiApeehDA).
 
 The full three-level game is free. An optional RevenueCat-powered
 **Neighbourhood Supporter Pack** unlocks a warm cosmetic community glow and

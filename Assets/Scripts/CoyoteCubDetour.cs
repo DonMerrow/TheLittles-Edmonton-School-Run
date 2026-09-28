@@ -153,6 +153,22 @@ public sealed class CoyoteCubDetour : MonoBehaviour
             Vector3 safeReturn=new(-4.2f,0.08f,62f);
             yield return MoveDannyAndMom(spark.transform,mom.transform,finish,trailGate,1.35f,momAnimator,followCamera,safeGroundY);
             yield return MoveDannyAndMom(spark.transform,mom.transform,trailGate,safeReturn,1.55f,momAnimator,followCamera,safeGroundY);
+
+            // The rescue needs a comic landing. Mom used to disappear as soon
+            // as Danny reached the sidewalk, which removed the affectionate,
+            // embarrassing lecture that gives her chase its personality.
+            director?.Show("MOTHER",
+                "Bad wolf! Danny Spark already has a mother, a lunch, and three perfectly good emergency mittens!",4.4f);
+            yield return new WaitForSeconds(4.0f);
+            director?.Show("DANNY",
+                "They were organized, and I was helping the children.",3.2f);
+            yield return new WaitForSeconds(2.9f);
+            director?.Show("MOTHER",
+                "You may finish helping. Then it is cocoa, a finger count, a coat inspection, and the complete wolf-safety lecture.",4.8f);
+            yield return new WaitForSeconds(4.4f);
+            director?.Show("DANNY",
+                "I need an adult. A less prepared adult.",3.2f);
+            yield return new WaitForSeconds(2.8f);
             mom.enabled=true;
             mom.ReturnHomeAfterWolfRescue();
         }

@@ -29,8 +29,8 @@ public static class RiverValleyAutoplay
         PlayerSettings.companyName = "The Littles";
         PlayerSettings.productName = "The Littles: Edmonton River Valley School Run";
         PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "ca.thelittles.rivervalleyschoolrun");
-        PlayerSettings.bundleVersion = "1.0.2";
-        PlayerSettings.Android.bundleVersionCode = 3;
+        PlayerSettings.bundleVersion = "1.0.3";
+        PlayerSettings.Android.bundleVersionCode = 4;
         PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64 | AndroidArchitecture.ARMv7;
         PlayerSettings.defaultInterfaceOrientation = UIOrientation.LandscapeLeft;
         EditorUserBuildSettings.buildAppBundle = false;

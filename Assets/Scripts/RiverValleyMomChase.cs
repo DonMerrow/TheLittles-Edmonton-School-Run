@@ -67,6 +67,11 @@ public sealed class RiverValleyMomChase : MonoBehaviour
         {
             chaseVelocity=Vector3.zero;
             animator?.SetFloat(SpeedHash,0f);
+            if(Time.time>=nextCallout)
+            {
+                nextCallout=Time.time+Random.Range(8f,12f);
+                director?.MomCallout();
+            }
             return;
         }
         // During the final search Mom stays at home. Her comic concern is
@@ -81,21 +86,23 @@ public sealed class RiverValleyMomChase : MonoBehaviour
             if(animator!=null)animator.speed=1f;
             if(Time.time>=nextCallout)
             {
-                nextCallout=Time.time+Random.Range(13f,19f);
+                nextCallout=Time.time+Random.Range(8.5f,12.5f);
                 director?.MomCallout();
             }
             return;
         }
-        if (player == null || Time.time < pausedUntil) { animator?.SetFloat(SpeedHash,0f); return; }
+        if (player == null) { animator?.SetFloat(SpeedHash,0f); return; }
         Vector3 offset = player.position - transform.position;
         Vector3 flat = Vector3.ProjectOnPlane(offset, Vector3.up);
-        if(Time.time>=nextCallout&&flat.magnitude>4f&&flat.magnitude<32f&&IsVisibleToGameCamera())
+        if(Time.time>=nextCallout)
         {
-            // Her voice should be a comic surprise, not a looping proximity
-            // alarm. Give the street, wind and other characters room to live.
-            nextCallout=Time.time+Random.Range(10.5f,15.5f);
+            // Mom's running commentary is the game's comic spine. Danny can
+            // cross the neighbourhood or earn a head start, but he cannot get
+            // beyond the reach of an embarrassing maternal reminder.
+            nextCallout=Time.time+Random.Range(7.5f,11.5f);
             director?.MomCallout();
         }
+        if(Time.time<pausedUntil) { animator?.SetFloat(SpeedHash,0f); return; }
         if (!walkingToCutoff && Time.time>=catchDisabledUntil && flat.magnitude < catchDistance)
         { director?.MomCaught(); GiveHeadStart(8f, 28f); return; }
         bool dawdling = movement != null && movement.CurrentPlanarSpeed < 0.22f;
@@ -192,7 +199,10 @@ public sealed class RiverValleyMomChase : MonoBehaviour
             {
                 openingHomeEmerged=true;
                 animator?.SetFloat(SpeedHash,0f);
-                director?.TryShowAmbient("MOTHER","Have a good school day, Danny! I can see you from the porch.",4f);
+                // Start the running joke immediately. The first thing Danny
+                // hears after leaving home is one of Mom's lovingly mortifying
+                // reminders, not a generic goodbye.
+                director?.MomCallout();
             }
             return;
         }
@@ -205,7 +215,8 @@ public sealed class RiverValleyMomChase : MonoBehaviour
         openingHomeGoodbye=true;
         pausedUntil=Time.time+4f;
         catchDisabledUntil=Time.time+10f;
-        nextCallout=Time.time+10f;
+        director?.MomCallout();
+        nextCallout=Time.time+Random.Range(6.5f,8.5f);
         headStartGap=10f;
     }
 
@@ -245,7 +256,10 @@ public sealed class RiverValleyMomChase : MonoBehaviour
         pausedUntil=Time.time+9f;
         catchDisabledUntil=Time.time+14f;
         headStartGap=9f;
-        nextCallout=Time.time+12f;
+        // Keep Mom present in the comedy after she leaves the rescue shot.
+        // Her next embarrassing reminder should arrive while the player still
+        // remembers the wolf lecture, not after the scene has gone quiet.
+        nextCallout=Time.time+4.5f;
         animator?.SetFloat(SpeedHash,0f);
     }
 
